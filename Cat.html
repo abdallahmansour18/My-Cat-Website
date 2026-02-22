@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat World - عالم القطط</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+        }
+
+        .home-content {
+            flex: 1;
+        }
+
+        .home-content h1 {
+            font-size: 3rem;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+
+        .home-content p {
+            font-size: 1.2rem;
+            color: #636e72;
+        }
+
+        .home-image {
+            flex: 1;
+            text-align: left; /* الصورة في اليمين (بما أن الصفحة RTL) */
+        }
+
+        .home-image img {
+            max-width: 80%;
+            border-radius: 20px;
+        }
+
+        /* Breeds Section */
+        .breeds {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .breeds h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            margin: 0 0 10px 0;
+            color: #ff6b6b;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 10%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            padding: 12px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #ee5253;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3436;
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* استجابة للهواتف */
+        @media (max-width: 768px) {
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .home-image img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Cat World 🐾</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#breeds">Breeds</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>All About Cats</h1>
+            <p>اكتشف عالم القطط الساحر، حيث الجمال والذكاء في مكان واحد.</p>
+        </div>
+        <div class="home-image">
+            <img src="https://media.istockphoto.com/id/2253355195/photo/red-knitted-heart-in-the-paws-of-a-cat-cute-domestic-fluffy-cat-for-valentines-day-or.webp?a=1&b=1&s=612x612&w=0&k=20&c=Aa6SDD2L_UfA42TXjS_iEI9Zl2LHn7weiC1yShdr-rY=" alt="Cute Cat">
+        </div>
+    </section>
+
+    <section class="breeds" id="breeds">
+        <h2>أشهر أنواع القطط</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1557246565-8a3d3ab5d7f6?auto=format&fit=crop&w=300&q=80" alt="Siamese">
+                <div class="card-info">
+                    <h3>السيامي (Siamese)</h3>
+                    <p>يتميز بعيونه الزرقاء وشخصيته الاجتماعية والذكية جداً.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=300&q=80" alt="Persian">
+                <div class="card-info">
+                    <h3>الشيرازي (Persian)</h3>
+                    <p>معروف بفروه الطويل ووجهه المميز وطباعه الهادئة والمحبة للمنزل.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?auto=format&fit=crop&w=300&q=80" alt="Maine Coon">
+                <div class="card-info">
+                    <h3>ماين كون (Maine Coon)</h3>
+                    <p>من أكبر أنواع القطط حجماً، ويمتلك ذيلاً طويلاً وفراءً كثيفاً جداً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2></h2>
+        <form>
+            <input type="text" placeholder="الاسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea rows="5" placeholder="رسالتك هنا..."></textarea>
+            <button type="submit">إرسال (Submit)</button>
+        </form>
+    </section>
+
+    <footer>
+        ©️ 2026 Cat Website
+    </footer>
+
+</body>
+</html>
